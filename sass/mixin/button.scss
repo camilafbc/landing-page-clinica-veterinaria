@@ -1,0 +1,24 @@
+@mixin button(
+    $btn-border-color, 
+    $bck-color, 
+    $btn-text-color: $btn-border-color 
+    ) {
+    border: solid 2px;
+    border-color: $btn-border-color;
+    padding: 10px 15px;
+    border-radius: 90px;
+    background-color: $bck-color;
+    color: $btn-text-color;
+    font-size: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &:hover{
+        cursor: pointer;
+        filter: brightness(80%) contrast(200%);
+        transition: 0.4s;
+    }
+}
