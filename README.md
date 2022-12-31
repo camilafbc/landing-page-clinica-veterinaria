@@ -1,7 +1,7 @@
 # 💻 Landing Page
 
 <p>
-  <img width="800px" src="https://raw.githubusercontent.com/camilafbc/landing-page-com-sass/main/to-readme.jpg">
+  <img width="750px" src="https://raw.githubusercontent.com/camilafbc/landing-page-com-sass/main/to-readme.jpg">
   <img width="200px" src="https://raw.githubusercontent.com/camilafbc/landing-page-com-sass/main/to-readme(01).jpeg">
 </p>
 
@@ -13,5 +13,5 @@ Landing page construída com inspiração no design disponibilizado pela Codar.m
 * Uso do SASS
 * Criação e utilização de variáveis, mixin e breakpoints
 * Compressão do arquivo CSS
-* API WhatsApp para envio de mensagem
+* WhatsApp API para envio de mensagem
 
