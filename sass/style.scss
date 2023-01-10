@@ -6,6 +6,8 @@
 
 @import 'mixin/responsividade.scss';
 
+// Reset CSS
+
 *{
     padding: 0;
     margin: 0;
@@ -13,10 +15,17 @@
     text-decoration: none;
 }
 
+iframe{
+    vertical-align: bottom;
+}
+
+// STYLE
+
 body{
     font-family: 'Manrope', sans-serif;
     background-color: $background-white-color;
 }
+
 
 .container{
     max-width: 1136px;
