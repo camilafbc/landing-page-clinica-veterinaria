@@ -68,7 +68,7 @@ body{
 // HERO SECTION
 
 .hero-section{
-    padding: 3rem 1.25rem;
+    padding: 3.125rem 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,7 +78,6 @@ body{
     @include respond-to('medium') {
         display: flex;
         flex-direction: row;
-        // justify-content: space-between;
       }  
 }
 
@@ -165,11 +164,18 @@ body{
 .hero-section-img{
     width: 320px;
     gap: 1.5rem;
-    margin-top: 3rem;
+    display: block;
+    margin: 3rem 0 auto;
 
-    @include respond-to('huge') {
+    @include respond-to('medium') {
+        margin: 0 auto;
+      } 
+
+    @include respond-to('large') {
         width: 95%;
     }
+
+    
 }
 
 // SERVICE SECTION
