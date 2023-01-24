@@ -1,0 +1,387 @@
+@import 'variaveis/colors.scss';
+
+@import 'mixin/button.scss';
+
+@import 'mixin/text.scss';
+
+@import 'mixin/responsividade.scss';
+
+// Reset CSS
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+iframe{
+    vertical-align: bottom;
+}
+
+// STYLE
+
+body{
+    font-family: 'Manrope', sans-serif;
+    background-color: $background-white-color;
+}
+
+
+.container{
+    max-width: 1136px;
+    margin: 0 auto;
+
+    @include respond-to('x-huge') {
+        max-width: 1500px;
+    }
+}
+
+// HEADER
+
+.header{
+    padding: 1.25em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn{
+        @include button(
+            $dark-blue-color,
+            transparent);
+
+        @include text(
+            0.8rem,
+            600,
+            1.37rem,
+            $dark-blue-color
+            );
+
+            @include respond-to('large') {
+                font-size: 0.9rem;
+                line-height: 1.5rem;
+            }
+    }
+}
+
+// HERO SECTION
+
+.hero-section{
+    padding: 3.150rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    @include respond-to('medium') {
+        display: flex;
+        flex-direction: row;
+      }  
+}
+
+.hero-section-text{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 2rem;
+}
+
+.hero-section-title{
+
+    @include text(
+        2rem,
+        800,
+        2.5rem,
+        $dark-blue-color
+    );
+
+        @include respond-to('large') {
+            font-size: 2.5rem;
+            line-height: 3.5rem;
+        }
+
+        @include respond-to('huge') {
+            font-size: 3.5rem;
+            line-height: 4rem;
+        }
+}
+
+.hero-section-subtitle{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+
+    @include text(
+        1rem,
+        400,
+        1.5rem,
+        $dark-blue-color
+    );
+
+        @include respond-to('large') {
+            font-size: 1.125rem;
+            line-height: 1.625rem;
+        }
+
+        @include respond-to('huge') {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+        }
+}
+
+.btn{
+    @include button(
+        $green-color,
+        $bck-color: $green-color);
+
+        @include text(
+            0.8rem,
+            600,
+            1.37rem,
+            $white-color
+        );
+
+            @include respond-to('large') {
+                font-size: 0.9rem;
+                line-height: 1.5rem;
+            }
+
+    img{
+        margin-right: 5px;
+    }
+
+        @include respond-to('medium') {
+            max-width: 60%;
+        }
+
+        @include respond-to('large') {
+            max-width: 50%;
+        }
+}
+
+.hero-section-img{
+    width: 320px;
+    gap: 1.5rem;
+    display: block;
+    margin: 3rem 0 auto;
+
+    @include respond-to('medium') {
+        margin: 0 auto;
+      } 
+
+    @include respond-to('large') {
+        width: 95%;
+    }
+
+    
+}
+
+// SERVICE SECTION
+
+#section-service{
+    background-color: $dark-blue-color;
+}
+
+.service-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 3rem 1.25rem;
+}
+
+.service-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.service-text-title{
+
+    @include text(
+        0.75rem,
+        800,
+        1rem,
+        $green-color
+    );
+
+        @include respond-to('huge') {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+}
+
+.service-text-subtitle{
+
+    @include text(
+        1.75rem,
+        800,
+        2.25rem,
+        $white-color
+    );
+
+        @include respond-to('huge') {
+            font-size: 2.75rem;
+            line-height: 3.5rem;
+        }
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+
+    @include respond-to('huge') {
+        justify-content: space-between;
+    }
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 500px;
+    border-radius: 2rem;
+    background-color: $soft-blue-color;
+}
+
+.card-image{
+    width: 320px;
+    height: 324px;
+
+    img{
+        width: 320px;
+        height: 324px;
+    }
+}
+
+.card-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: center;
+    padding-top: 2.625rem;
+    width: 256px;
+    height: 88px;
+    color: $white-color;
+}
+
+.card-title{
+    
+    @include text(
+        1.5rem,
+        800,
+        2rem,
+        $white-color
+    );
+    padding-bottom: 5px;
+}
+
+.card-subtitle{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+
+    @include text(
+        1rem,
+        400,
+        1.5rem,
+        $white-color
+    )
+}
+
+// LOCATION SECTION
+
+.location-section{
+    padding: 3rem 1.25rem 1.125rem; 
+}
+
+.location-section-text{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.location-section-title{
+
+    @include text(
+        0.75rem,
+        800,
+        1.5rem,
+        $green-color
+    )
+}
+
+.location-section-subtitle{
+
+    @include text(
+        1.75rem,
+        800,
+        2.25rem,
+        $dark-blue-color
+    );
+
+        @include respond-to('huge') {
+            font-size: 2.75rem;
+            line-height: 3.5rem;
+        }
+}
+
+.address{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    span{
+        font-size: 1rem;
+        font-weight: 400;
+        color: $soft-blue-color;
+
+        @include text(
+            1rem,
+            400,
+            2rem,
+            $soft-blue-color
+        )
+    }
+    
+}
+
+
+// FOOTER
+
+.footer{
+    background-color: $dark-blue-color;
+}
+
+.footer-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 3rem 1.25rem 1.5rem;
+
+    img{
+        width: 70px;
+    }
+}
+
+.footer-credit-text{
+    font-size: 1rem;
+    font-weight: 400;
+    color: $white-color;
+}
+
+.social-media{
+    padding-top: 3px;
+
+    img{
+        width: 30%;
+    }
+}
